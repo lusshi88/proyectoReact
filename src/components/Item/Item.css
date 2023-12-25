@@ -1,0 +1,30 @@
+.producto-item {
+    
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3rem;
+    overflow: hidden;
+}
+.producto-item > div {
+    
+    padding: 1rem;
+    background-color: var(--clr-main-light);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.ver-mas {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: .5rem;
+    width: max-content;
+    border-radius: .6rem;
+    transition: .2s;
+}
+.producto-item .ver-mas:hover {
+    background-color: green;
+    color: white;
+}

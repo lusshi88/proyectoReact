@@ -1,0 +1,43 @@
+.body {
+  background-image: url(../src/imagenes/wallpaperflare.com_wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+   
+}
+
+
+.icono { font-size: 90px;
+  color: white;
+
+}
+
+.carrito {
+  font-size: 40px;
+  color: white;
+}
+.badge {
+  font-size: 20px;
+  color: white;
+ 
+}
+
+.menuboton {
+  color: white;
+  font-size: 50px;
+}
+.items {
+  color: white;
+  font-size: 20px;
+} 
+
+.letrasCard{
+  color: white;
+}
+
+.boton {
+  color: darkviolet;
+  background-color: white;
+}
+
