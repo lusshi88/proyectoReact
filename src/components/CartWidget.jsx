@@ -4,6 +4,7 @@ import React, { useContext } from 'react'
 // biblioteca de iconos --------------------
 import {BiSolidCart}from "react-icons/bi";
 import { ContextCarrito } from './ContextCarrito/ContextCarrito';
+import { Link } from 'react-router-dom';
 
 
 
@@ -18,10 +19,10 @@ const {cantidadDeCarrito} = useContext (ContextCarrito);
    
       
 
-      <Button>
-<BiSolidCart  /> 
+    <Button>
+      <BiSolidCart  /> 
 
-<Badge borderRadius="full " variant="solid" colorScheme="red" ml={3}> {cantidadDeCarrito()}  </Badge>
+      <Link to={"/carrito"}> <Badge borderRadius="full " variant="solid" colorScheme="red" ml={3}> {cantidadDeCarrito()}  </Badge></Link>
        </Button>
         </div>
         

@@ -10,6 +10,7 @@ import Checkout from './components/Checkout'
 import Contacto from './components/Contacto/Contacto'
 import { useState } from 'react'
 import { ContextCarrito } from './components/ContextCarrito/ContextCarrito'
+import Carrito from './components/Carrito/Carrito'
 
 
 function App() {
@@ -38,10 +39,18 @@ function App() {
   }
   console.log(cantidadDeCarrito);
 
+  const precioTotal = () => {
+    return carrito.reduce ((acc,prod)=> acc + prod.precio * prod.cantidad, 0)
+  }
+
+  const vaciarCarrito = () =>{
+    setCarrito ([])
+  }
+
   return (
    
     <div>
-      <ContextCarrito.Provider value={ {carrito, agregar,cantidadDeCarrito} }>
+      <ContextCarrito.Provider value={ {carrito, agregar,cantidadDeCarrito,precioTotal,vaciarCarrito} }>
        <BrowserRouter>
       <NavBar />
        
@@ -53,6 +62,8 @@ function App() {
       <Route path="/item/:id" element={<ItemDetailContainer/>} />
       <Route path='/checkout' element={<Checkout/>} />
       <Route path="/contacto" element={<Contacto/>} />
+      <Route path="/carrito" element={<Carrito/>} />
+
       </Routes>
       </BrowserRouter>
       </ContextCarrito.Provider>
